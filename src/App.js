@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
+import profile from './profile.jpg';
 import React from 'react';
 import './App.css';
 
