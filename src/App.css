@@ -19,6 +19,16 @@ body {
   border-bottom: 2px solid #3a3a5c;
 }
 
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #64b5f6;
+  margin-bottom: 15px;
+}
+
+
 .about, .projects, .contact {
   margin: 50px 0;
 }
