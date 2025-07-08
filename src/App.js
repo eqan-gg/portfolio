@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="container">
       <header className="header">
+      <img src={profileImage} alt="Profile" className="profile-image" />
         <h1>Eqan Chauhan</h1>
         <p>Web Developer</p>
       </header>
