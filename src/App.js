@@ -28,9 +28,21 @@ function App() {
         <div className="project">
           <h3>Todo App</h3>
           <p>Simple task manager with add/delete features and local storage support.</p>
-    <a href="https://todolist-app-psi-smoky.vercel.app" target="_blank">
-  <button>View ToDo App</button>
+    <a href="https://todolist-app-psi-smoky.vercel.app" target="_blank" rel="noopener noreferrer">
+  <button style={{
+    padding: '10px 20px',
+    backgroundColor: '#2a2a3d',
+    color: '#64b5f6',
+    border: '1px solid #3a3a5c',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    fontSize: '16px',
+    marginTop: '10px'
+  }}>
+    View ToDo App
+  </button>
 </a>
+
 
         </div>
       </section>
