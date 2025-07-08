@@ -9,7 +9,7 @@ function App() {
     <div className="container">
       <header className="header">
         <h1>Eqan Chauhan</h1>
-        <p>Frontend Web Developer</p>
+        <p>Web Developer</p>
       </header>
 
       <section className="about">
