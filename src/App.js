@@ -28,6 +28,10 @@ function App() {
         <div className="project">
           <h3>Todo App</h3>
           <p>Simple task manager with add/delete features and local storage support.</p>
+    <a href="https://todo-app.vercel.app" target="_blank">
+  <button>View ToDo App</button>
+</a>
+
         </div>
       </section>
 
