@@ -48,7 +48,7 @@ function App() {
             <li>Separate Favorites page with routing</li>
             <li>Fully responsive & clean layout using custom CSS</li>
           </ul>
-          <a href="https://your-movie-app-link.vercel.app" target="_blank" rel="noopener noreferrer">
+          <a href="https://movies-app-three-sand.vercel.app/" target="_blank" rel="noopener noreferrer">
             <button style={buttonStyle}>View Movie App</button>
           </a>
         </div>
