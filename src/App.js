@@ -240,11 +240,11 @@ function App() {
                   <span className="tech-tag">API</span>
                 </div>
                 <div className="project-buttons">
-                  <a href="../movies-app/index.html" className="btn-project" target="_blank" rel="noopener noreferrer">
+                  <a href="https://movies-app-three-sand.vercel.app/" className="btn-project" target="_blank" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                     <span>Live Demo</span>
                   </a>
-                  <a href="../movies-app/" className="btn-project-secondary">
+                  <a href="https://github.com/eqan-gg/movies-app" className="btn-project-secondary">
                     <i className="fab fa-github"></i>
                     <span>Source Code</span>
                   </a>
@@ -271,14 +271,14 @@ function App() {
                   <span className="tech-tag">Responsive</span>
                 </div>
                 <div className="project-buttons">
-                  <a href="../pj 1/index.html" className="btn-project" target="_blank" rel="noopener noreferrer">
+                  <a href="https://nexusai-landing-page.vercel.app/" className="btn-project" target="_blank" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                     <span>Live Demo</span>
                   </a>
-                  <a href="../pj 1/" className="btn-project-secondary">
+                  <a href="https://github.com/eqan-gg/nexusai-landing-page" className="btn-project-secondary">
                     <i className="fab fa-github"></i>
                     <span>Source Code</span>
-                  </a>
+                  </a >
                 </div>
               </div>
             </div>
