@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import profileImage from './profile.jpeg';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [profileColor, setProfileColor] = useState(0);
 
   useEffect(() => {
     const handleSmoothScroll = (e) => {
@@ -37,6 +40,10 @@ function App() {
       }
     };
 
+    const colorInterval = setInterval(() => {
+      setProfileColor(prev => (prev + 1) % 6);
+    }, 3000);
+
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
       link.addEventListener('click', handleSmoothScroll);
@@ -45,12 +52,18 @@ function App() {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
+      clearInterval(colorInterval);
       anchorLinks.forEach(link => {
         link.removeEventListener('click', handleSmoothScroll);
       });
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('light-mode');
+  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -80,6 +93,9 @@ function App() {
             <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={() => scrollToSection('contact')}>
               <span>Contact</span>
             </a>
+            <button className="theme-toggle" onClick={toggleDarkMode}>
+              <i className={`fas ${isDarkMode ? 'fa-sun' : 'fa-moon'}`}></i>
+            </button>
           </div>
           <div className="nav-indicator"></div>
         </div>
@@ -95,13 +111,23 @@ function App() {
           </div>
         </div>
         <div className="hero-content">
+          
+          <div className="profile-section">
+            <div className="profile-container">
+              <img 
+                src={profileImage} 
+                alt="Eqan Chauhan - Web Developer" 
+                className="profile-img"
+              />
+            </div>
+          </div>
           <div className="hero-badge">
             <span>Available for work</span>
             <div className="pulse-dot"></div>
           </div>
           <h1 className="hero-title">
             <span className="title-line">Eqan Chauhan</span>
-            <span className="title-sub">Frontend Developer</span>
+            <span className="title-sub">Web Dev Developer</span>
           </h1>
           <p className="hero-description">
             Crafting digital experiences with passion and precision. 

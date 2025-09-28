@@ -23,6 +23,18 @@
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.light-mode {
+  --dark-bg: #f8fafc;
+  --darker-bg: #ffffff;
+  --card-bg: rgba(0, 0, 0, 0.05);
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow-primary: 0 20px 40px rgba(102, 126, 234, 0.2);
+  --shadow-secondary: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -187,6 +199,29 @@ body::before {
   opacity: 0.1;
 }
 
+.theme-toggle {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.theme-toggle:hover {
+  background: var(--primary-gradient);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+}
+
 .nav-indicator {
   position: absolute;
   bottom: 0;
@@ -268,6 +303,42 @@ body::before {
   position: relative;
   z-index: 2;
   animation: fadeInUp 1.2s ease-out;
+}
+
+.profile-section {
+  margin-bottom: 3rem;
+  animation: fadeInUp 1.2s ease-out 0.1s both;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--primary-gradient);
+  box-shadow: var(--shadow-primary);
+  transition: var(--transition);
+}
+
+.profile-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(102, 126, 234, 0.4);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: var(--transition);
+}
+
+.profile-container:hover .profile-img {
+  transform: scale(1.05);
 }
 
 .hero-badge {
@@ -977,6 +1048,15 @@ section {
   }
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     padding: 0 1.5rem;
@@ -1003,7 +1083,18 @@ section {
 
 @media (max-width: 768px) {
   .nav-menu {
-    display: none;
+    gap: 1.5rem;
+  }
+  
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .profile-container {
+    width: 150px;
+    height: 150px;
   }
   
   .title-line {
@@ -1062,6 +1153,21 @@ section {
     height: 70px;
   }
   
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .theme-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .profile-container {
+    width: 120px;
+    height: 120px;
+  }
+  
   .title-line {
     font-size: 2.5rem;
   }
@@ -1086,3 +1192,5 @@ section {
     padding: 1.5rem;
   }
 }
+
+
