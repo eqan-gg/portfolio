@@ -247,6 +247,43 @@ function App() {
             <div className="title-decoration"></div>
           </h2>
           <div className="projects-grid">
+
+
+      {/* new prj pushing */}
+
+
+<div className="project-card">
+              <div className="project-image">
+                <div className="project-overlay">
+                  <div className="project-icons">
+                    <i className="fas fa-user"></i>
+                  </div>
+                </div>
+                <div className="project-badge">Employee Task Management System</div>
+              </div>
+              <div className="project-content">
+                <h3>ManageUp</h3>
+                <p>ManageUpis a React-based Employee Task Management System where admins create and assign tasks, and employees view, accept, and update them. Dashboards show task status—New, Active, Completed, Failed. Using localStorage, all data persists without a backend, making workflow fast, simple, and efficient.</p>
+                <div className="project-tech">
+                  <span className="tech-tag">React</span>
+                  <span className="tech-tag">Tailwind CSS</span>
+                  <span className="tech-tag">JavaScript</span>
+                  <span className="tech-tag">Responsive</span>
+                </div>
+                <div className="project-buttons">
+                  <a href="https://manage-up.vercel.app/" className="btn-project" target="_blank" rel="noopener noreferrer">
+                    <i className="fas fa-external-link-alt"></i>
+                    <span>Live Demo</span>
+                  </a>
+                  <a href="https://github.com/eqan-gg/ManageUp" className="btn-project-secondary">
+                    <i className="fab fa-github"></i>
+                    <span>Source Code</span>
+                  </a >
+                </div>
+              </div>
+            </div>
+
+
             <div className="project-card">
               <div className="project-image">
                 <div className="project-overlay">
@@ -429,7 +466,7 @@ function App() {
               </div>
               <div className="footer-section">
                 <h4>Connect</h4>
-                <a href="https://github.com" className="social-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/eqan-gg" className="social-link" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github"></i>
                   GitHub
                 </a>
